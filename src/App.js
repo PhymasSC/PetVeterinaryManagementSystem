@@ -1,9 +1,11 @@
 import { SlideBar } from "./components/SlideBar";
+// import {CreateMedicalRecord} from "./components/CreateMedicalRecord";
 
 function App() {
 	return (
-		<div>
+		<div className="flex">
 			<SlideBar />
+			{/* <CreateMedicalRecord /> */}
 		</div>
 	);
 }
