@@ -1,11 +1,12 @@
-import { SlideBar } from "./components/SlideBar";
-// import {CreateMedicalRecord} from "./components/CreateMedicalRecord";
-
+import { CreateMedicalRecord } from "./pages/CreateMedicalRecord";
+import { FormEditProcedures } from "./pages/FormEditProcedures";
+import StyledForm from "./components/StyledForm";
+import SideBar from "./components/SideBar";
+import SlideBar from "./components/SlideBar";
 function App() {
 	return (
-		<div className="flex">
-			<SlideBar />
-			{/* <CreateMedicalRecord /> */}
+		<div>
+			<SideBar />
 		</div>
 	);
 }
