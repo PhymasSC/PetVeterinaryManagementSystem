@@ -1,9 +1,10 @@
 import React from "react";
 import logo from "./../../assets/img/logo.png";
 import { House, Notebook, Book, Calendar } from "phosphor-react";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import NavBarItem from "./../NavBarItem/styles";
 
-const Index = () => (
+const Index = props => (
 	<div className="flex flex-no-wrap">
 		{/* Sidebar starts */}
 		{/* Remove class [ hidden ] and replace [ sm:flex ] with [ flex ] */}
@@ -21,7 +22,7 @@ const Index = () => (
 								size={20}
 								alt="Homepage"
 							/>
-							<span>Dashboard</span>
+							<Link to="/">Dashboard</Link>
 						</div>
 						<div>5</div>
 					</NavBarItem>
@@ -477,7 +478,7 @@ const Index = () => (
 		<div className="container mx-auto py-10 h-64 md:w-4/5 w-11/12 px-6">
 			{/* Remove class [ border-dashed border-2 border-gray-300 ] to remove dotted border */}
 			<div className="w-full h-full rounded border-dashed border-2 border-gray-300">
-				{/* Place your content here */}
+				{props.content}
 			</div>
 		</div>
 	</div>

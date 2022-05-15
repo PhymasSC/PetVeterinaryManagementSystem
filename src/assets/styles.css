@@ -534,10 +534,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: block;
 }
 
-.inline-block {
-  display: inline-block;
-}
-
 .flex {
   display: flex;
 }
@@ -566,12 +562,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 10rem;
 }
 
-.h-4 {
-  height: 1rem;
-}
-
 .h-16 {
   height: 4rem;
+}
+
+.h-4 {
+  height: 1rem;
 }
 
 .h-64 {
@@ -610,10 +606,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
-.w-4 {
-  width: 1rem;
-}
-
 .w-64 {
   width: 16rem;
 }
@@ -622,24 +614,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 2.5rem;
 }
 
+.w-4 {
+  width: 1rem;
+}
+
 .w-11\/12 {
   width: 91.666667%;
 }
 
 .max-w-xs {
   max-width: 20rem;
-}
-
-@keyframes ping {
-
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-.animate-ping {
-  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 .cursor-pointer {
@@ -676,10 +660,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .rounded-lg {
   border-radius: 0.5rem;
-}
-
-.rounded-full {
-  border-radius: 9999px;
 }
 
 .rounded {
@@ -722,6 +702,31 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-style: dashed;
 }
 
+.border-primary-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(187 250 238 / var(--tw-border-opacity));
+}
+
+.border-danger-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 68 106 / var(--tw-border-opacity));
+}
+
+.border-info-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(43 131 255 / var(--tw-border-opacity));
+}
+
+.border-success-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(61 198 66 / var(--tw-border-opacity));
+}
+
+.border-info-800 {
+  --tw-border-opacity: 1;
+  border-color: rgb(13 52 147 / var(--tw-border-opacity));
+}
+
 .bg-\[\#4ecdd5\] {
   --tw-bg-opacity: 1;
   background-color: rgb(78 205 213 / var(--tw-bg-opacity));
@@ -737,8 +742,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(78 205 213 / var(--tw-bg-opacity));
 }
 
-.p-2 {
-  padding: 0.5rem;
+.bg-\[\#FFF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .px-4 {
@@ -877,6 +883,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(78 205 213 / var(--tw-text-opacity));
 }
 
+.text-\[\#FFF\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -910,14 +921,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-
-@keyframes ping {
-    75%, 100% {
-        transform: scale(2);
-        opacity: 0;
-    }
-    }
+.hover\:bg-info-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 168 255 / var(--tw-bg-opacity));
+}
 
 .hover\:text-primary-700:hover {
   --tw-text-opacity: 1;
@@ -995,4 +1002,4 @@ animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   .lg\:w-\[40rem\] {
     width: 40rem;
   }
-}
+} 

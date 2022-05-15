@@ -1,4 +1,6 @@
-export function CreateMedicalRecord() {
+import React from "react";
+
+const CreateMedicalRecord = () => {
   return (
     <div className="bg-teal-50 w-[93%]">
       <div className="flex justify-between">
@@ -76,3 +78,5 @@ export function CreateMedicalRecord() {
     </div>
   );
 }
+
+export default CreateMedicalRecord;
