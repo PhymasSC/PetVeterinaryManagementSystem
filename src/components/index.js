@@ -1,5 +1,5 @@
-import NavBarItem from "./NavBarItem";
-import SideBar from "./SideBar";
-import StyledForm from "./StyledForm/";
+import NavBarItem from "./NavbarItem";
+import SideBar from "./Sidebar";
+import StyledForm from "./StyledForm";
 
 export { NavBarItem, SideBar, StyledForm };

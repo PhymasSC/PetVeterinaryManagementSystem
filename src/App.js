@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layout";
-import Blogs from "./routers/Blogs";
-import CreateMedicalRecord from "./routers/CreateMedicalRecord";
-import FormEditProcedures from "./routers/FormEditProcedures";
-import Home from "./routers/Home";
+import Blogs from "./routes/Blogs";
+import CreateMedicalRecord from "./routes/CreateMedicalRecord";
+import FormEditProcedures from "./routes/FormEditProcedures";
+import Home from "./routes/Home";
 
 function App() {
 	return (
@@ -14,6 +14,7 @@ function App() {
 					<Route path="blogs" element={<Blogs />} />
 					<Route path="mr" element={<CreateMedicalRecord />} />
 					<Route path="p" element={<FormEditProcedures />} />
+					<Route path="*" element={<Home />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 
-const NavBarItem = styled.li`
+const NavbarItem = styled.li`
 	${p => (p.active ? tw`text-primary-100` : tw`text-primary-900`)}
 	${tw`flex w-full justify-between  hover:text-primary-700 cursor-pointer items-center mb-6`}
 
@@ -19,4 +19,4 @@ const NavBarItem = styled.li`
 	}
 `;
 
-export default NavBarItem;
+export default NavbarItem;

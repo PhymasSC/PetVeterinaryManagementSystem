@@ -1,7 +1,7 @@
 import React from "react";
 import StyledForm from "./styles";
 
-function App() {
+function StyledFormComponent() {
 	return (
 		<StyledForm method="POST">
 			<input type="text" placeholder="Full name" />
@@ -12,4 +12,4 @@ function App() {
 	);
 }
 
-export default App;
+export default StyledFormComponent;
