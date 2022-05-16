@@ -1,13 +1,14 @@
 import React from "react";
-
+import { Clock } from "../components/index";
 const FormEditProcedures = () => {
 	return (
-		<div className="bg-teal-50 w-[93%]">
+		<div className=" w-[93%]">
 			<div className="flex justify-between">
 				<h1 className="font-medium text-2xl ml-10 pt-12 pb-10">
 					Edit Procedure
 				</h1>
 				<input type="datetime-local" className="bg-teal-50 mr-10" />
+				<Clock/>
 			</div>
 			<div className="bg-white rounded-xl w-[80%] m-auto">
 				<form action="get" className="flex flex-col items-center py-12">

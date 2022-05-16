@@ -59,9 +59,9 @@ const SidebarComponent = props => {
 									color="currentColor"
 									weight="duotone"
 									size={20}
-									alt="Medical record"
+									alt="Procedure"
 								/>
-								<span>Medical record</span>
+								<Link to="/p">Procedure</Link>
 							</div>
 							<div>5</div>
 						</NavbarItem>
@@ -146,9 +146,9 @@ const SidebarComponent = props => {
 									color="currentColor"
 									weight="duotone"
 									size={20}
-									alt="Medical record"
+									alt="Procedure"
 								/>
-								<span>Medical record</span>
+								<Link to="/p">Procedure</Link>
 							</div>
 							<div>5</div>
 						</NavbarItem>
@@ -157,7 +157,7 @@ const SidebarComponent = props => {
 				{/* )} */}
 			</div>
 			{/* Sidebar ends */}
-			<div className="container mx-auto py-10 md:w-4/5 w-11/12 px-6">
+			<div className="container py-10 md:w-4/5 w-full px-6 bg-teal-50">
 				{props.children}
 			</div>
 		</div>
