@@ -2,6 +2,9 @@ module.exports = {
 	content: ["./src/**/*.{js,jsx,ts,tsx}"],
 	theme: {
 		extend: {
+			cursor: {
+				fancy: "url(hand.cur), pointer"
+			},
 			fontFamily: {
 				poppins: ["Poppins", "sans-serif"]
 			},
