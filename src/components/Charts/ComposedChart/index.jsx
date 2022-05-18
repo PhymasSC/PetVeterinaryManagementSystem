@@ -1,22 +1,31 @@
 import React from "react";
-import {ResponsiveContainer, ComposedChart, linearGradient, CartesianGrid, YAxis, Bar, Area, Tooltip, Legend} from "recharts"
+import {
+    ResponsiveContainer,
+    ComposedChart,
+    CartesianGrid,
+    YAxis,
+    Bar,
+    Area,
+    Tooltip,
+    Legend,
+} from "recharts";
 
-const ComposedChart = () => {
+const ComposedChartComponent = ({ configuration }) => {
     return (
         <ResponsiveContainer width="100%" height="93.5%">
             <ComposedChart
-                width={400}
-                height={250}
-                data={rangeData}
-                margin={{
-                    top: 20,
-                    right: 0,
+                width={configuration.width || 400}
+                height={configuration.height || 400}
+                data={configuration.data}
+                margin={configuration.margin || {
+                    top: 0,
                     bottom: 0,
                     left: 0,
+                    right: 0
                 }}
             >
                 <defs>
-                    <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                    <linearGradient id="theme-1" x1="0" y1="0" x2="0" y2="1">
                         <stop
                             offset="5%"
                             stopColor="#4ECDD5"
@@ -28,7 +37,7 @@ const ComposedChart = () => {
                             stopOpacity={0}
                         />
                     </linearGradient>
-                    <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                    <linearGradient id="theme-2" x1="0" y1="0" x2="0" y2="1">
                         <stop
                             offset="5%"
                             stopColor="#4ECDD5"
@@ -41,12 +50,12 @@ const ComposedChart = () => {
                         />
                     </linearGradient>
                 </defs>
-                <CartesianGrid vertical={false} />
+                <CartesianGrid {...configuration.cartesianGridConfig} />
                 <YAxis orientation="right" />
-                <Bar dataKey="pv" barSize={20} fill="#277F99" />
+                <Bar dataKey={configuration.barName} barSize={20} fill="#277F99" />
                 <Area
                     type="monotone"
-                    dataKey="temperature"
+                    dataKey={configuration.areaName}
                     stroke="#4ECDD5"
                     fillOpacity={1}
                     fill="url(#colorUv)"
@@ -58,4 +67,4 @@ const ComposedChart = () => {
     );
 };
 
-export default ComposedChart;
+export default ComposedChartComponent;
