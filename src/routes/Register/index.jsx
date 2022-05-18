@@ -1,79 +1,104 @@
-import React from 'react'
-
+import React from "react";
+import EditorLayout from "../../layouts/EditorLayout";
+import PrimaryButton from "../../components/Button";
 const SignUpComponent = () => {
     return (
-        <>
           <div>
-          </div>
-    
-          <div className="hidden sm:block" aria-hidden="true">
-            <div className="py-5">
-              <div className="border-t border-gray-200" />
-            </div>
-    
+              <EditorLayout title="Registration">
+              <form action="" method="POST" className="flex flex-col items-center py-12"
+				>
 
-            <div className="col-span-6 sm:col-span-3">
-                          <label htmlFor="Job" className="block text-sm font-medium text-gray-700">
-                            Registration
-                          </label>
+                <div className="pb-10 ">
+						<tr>
+							<th className="md:10rem lg:w-[20rem] text-left">
+								Full Name
+							</th>
+							<td>
+								<input
+									type="text"
+									className="rounded-lg w-[20rem] lg:w-[40rem] h-8 px-3 py-4 border-2 border-gray-300"
+								/>
+							</td>
+						</tr>
+					</div>
 
-                <form action="#" method="POST">
-                  <div className="shadow overflow-hidden sm:rounded-md">
-                    <div className="px-4 py-5 bg-white sm:p-6">
-                      <div className="grid grid-cols-6 gap-6">
+                    <div className="pb-10 ">
+						<tr>
+							<th className="md:10rem lg:w-[20rem] text-left">
+								E-Mail Address
+							</th>
+							<td>
+								<input
+									type="email"
+									className="rounded-lg w-[20rem] lg:w-[40rem] h-8 px-3 py-4 border-2 border-gray-300"
+								/>
+							</td>
+						</tr>
+					</div>
+                    
+                    <div className="pb-10 ">
+						<tr>
+							<th className="md:10rem lg:w-[20rem] text-left">
+								Password
+							</th>
+							<td>
+								<input
+									type="password"
+									className="rounded-lg w-[20rem] lg:w-[40rem] h-8 px-3 py-4 border-2 border-gray-300"
+								/>
+							</td>
+						</tr>
+					</div>
 
-                        <div className="col-span-6 sm:col-span-3">
-                          <label htmlFor="fullname" className="block text-sm font-medium text-gray-700">
-                            Full Name
-                          </label>
-                          <input type="text" placeholder="Full name" />
-                        </div>
-    
-                        <div className="col-span-6 sm:col-span-4">
-                          <label htmlFor="email-address" className="block text-sm font-medium text-gray-700">
-                            Email address
-                          </label>
-                          <input type="email" placeholder="Email" />
-                        </div>
+                    <div className="pb-10 ">
+						<tr>
+							<th className="md:10rem lg:w-[20rem] text-left">
+								Confirmation Password
+							</th>
+							<td>
+								<input
+									type="password"
+									className="rounded-lg w-[20rem] lg:w-[40rem] h-8 px-3 py-4 border-2 border-gray-300"
+								/>
+							</td>
+						</tr>
+					</div>
 
-                        <div className="col-span-6 sm:col-span-3">
-                          <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                            Password
-                          </label>
-                          <input type="password" placeholder="Password" />
-                        </div>
-    
-                         <div className="col-span-6 sm:col-span-3">
-                          <label htmlFor="phonenumber" className="block text-sm font-medium text-gray-700">
-                            Phone Number
-                          </label>
-                          <input type="number" placeholder="Phone Number" />
-                        </div>
-    
-                        <div className="col-span-6 sm:col-span-3">
-                          <label htmlFor="Cpassword" className="block text-sm font-medium text-gray-700">
-                             Confirmation Password
-                          </label>
-                          <input type="password" placeholder="Confirmartion Password" />
-                        </div>
-    
-                        <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                          <label htmlFor="postal-code" className="block text-sm font-medium text-gray-700">
-                            Address
-                          </label>
-                          <input type="text" placeholder="Address" />
-                        </div>
-                        <button>Next</button>
-                        <p>Already have account ?</p>
-                        <a href="sign in.jsx" target="_blank">Sign in</a> 
-                      </div>
-                    </div>
-                    </div>
-                    </form>
-                    </div>
-                    </div>
-          
-        </>   
+                    <div className="pb-10 ">
+						<tr>
+							<th className="md:10rem lg:w-[20rem] text-left">
+								Phone Number
+							</th>
+							<td>
+								<input
+									type="number"
+									className="rounded-lg w-[20rem] lg:w-[40rem] h-8 px-3 py-4 border-2 border-gray-300"
+								/>
+							</td>
+						</tr>
+					</div>
+
+                    <div className="pb-10 ">
+						<tr>
+							<th className="md:10rem lg:w-[20rem] text-left">
+								Address
+							</th>
+							<td>
+								<input
+									type="text"
+									className="rounded-lg w-[20rem] lg:w-[40rem] h-8 px-3 py-4 border-2 border-gray-300"
+								/>
+							</td>
+						</tr>
+					</div>
+
+                        <button>Next <input type="button" value="" /></button>
+                        <p>Already have account?</p>
+                        <a href="./SignIn" target="_blank">Sign in</a> 
+                        
+                        </form>
+                        </EditorLayout>
+                      </div>       
       )
     }
 
