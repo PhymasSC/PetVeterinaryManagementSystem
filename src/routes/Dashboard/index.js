@@ -16,23 +16,23 @@ const COLORS = ["#4ECDD5", "#277F99", "#FFBB28", "#FF8042"];
 const datasets2 = [
     {
         day: "05-01",
-        temperature: 10,
+        temperature: 18,
         pv: 8,
     },
     {
         day: "05-01",
-        temperature: 10,
-        pv: 8,
+        temperature: 12,
+        pv: 17,
     },
     {
         day: "05-01",
-        temperature: 10,
-        pv: 8,
+        temperature: 28,
+        pv: 9,
     },
     {
         day: "05-01",
-        temperature: 10,
-        pv: 8,
+        temperature: 7,
+        pv: 20,
     },
 ];
 
@@ -53,7 +53,7 @@ const Home = () => {
     return (
         <>
             <Header title="Dashboard" />
-            <div className="flex">
+            <div className="flex gap-2 flex-wrap">
                 <Widget cardTitle="Appointment" chartConfig={chartData} />
                 <Widget cardTitle="Appointment" chartConfig={chartData} />
             </div>

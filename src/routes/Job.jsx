@@ -1,8 +1,7 @@
-
-   
 import React from "react";
-import EditorLayout from "../../layouts/EditorLayout";
-import { Clock } from "../../components/index";
+import EditorLayout from "./../layouts/EditorLayout"
+import { Clock } from "./../components/index";
+
 const JobComponent = () => {
     return (
           <div>

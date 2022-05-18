@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from "recharts";
+import { PieChart, Pie, Sector } from "recharts";
 
 const renderActiveShape = (props) => {
     const RADIAN = Math.PI / 180;
@@ -73,7 +73,7 @@ const renderActiveShape = (props) => {
     );
 };
 
-const PieChartComponent = ( props ) => {
+const PieChartComponent = (props) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const onPieEnter = useCallback(
         (_, index) => {

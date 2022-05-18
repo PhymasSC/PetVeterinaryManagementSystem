@@ -17,12 +17,14 @@ const ComposedChartComponent = ({ configuration }) => {
                 width={configuration.width || 400}
                 height={configuration.height || 400}
                 data={configuration.data}
-                margin={configuration.margin || {
-                    top: 0,
-                    bottom: 0,
-                    left: 0,
-                    right: 0
-                }}
+                margin={
+                    configuration.margin || {
+                        top: 0,
+                        bottom: 0,
+                        left: 0,
+                        right: 0,
+                    }
+                }
             >
                 <defs>
                     <linearGradient id="theme-1" x1="0" y1="0" x2="0" y2="1">
@@ -52,13 +54,17 @@ const ComposedChartComponent = ({ configuration }) => {
                 </defs>
                 <CartesianGrid {...configuration.cartesianGridConfig} />
                 <YAxis orientation="right" />
-                <Bar dataKey={configuration.barName} barSize={20} fill="#277F99" />
+                <Bar
+                    dataKey={configuration.barName}
+                    barSize={20}
+                    fill="#277F99"
+                />
                 <Area
                     type="monotone"
                     dataKey={configuration.areaName}
                     stroke="#4ECDD5"
                     fillOpacity={1}
-                    fill="url(#colorUv)"
+                    fill="url(#theme-1)"
                 />
                 <Tooltip />
                 <Legend verticalAlign="bottom" height={16} />
