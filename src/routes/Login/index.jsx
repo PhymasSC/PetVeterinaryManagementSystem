@@ -1,5 +1,6 @@
-import React from 'react'
-
+import React from "react";
+import EditorLayout from "../../layouts/EditorLayout";
+import PrimaryButton from "../../components/Button";
 const SignInComponent = () => {
     return (
         <>
