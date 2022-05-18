@@ -1,31 +1,71 @@
 import React from "react";
 import EditorLayout from "../../layouts/EditorLayout";
-import { Clock } from "../../components/index";
-
 import Input from "../../components/Input";
-import { Button } from "../../components";
+import { Button, Form } from "../../components";
+
+const formContents = [
+    {
+        component: Input,
+        type: "text",
+        content: "Pet Name",
+    },
+    {
+        component: Input,
+        type: "text",
+        content: "Age",
+    },
+    {
+        component: Input,
+        type: "text",
+        content: "Gender",
+    },
+    {
+        component: Input,
+        type: "text",
+        content: "Core Curriculum Category",
+    },
+    {
+        component: Input,
+        type: "text",
+        content: "Surgical Category",
+    },
+    {
+        component: Input,
+        type: "text",
+        content: "Surgical Procedure",
+    },
+    {
+        component: Input,
+        type: "text",
+        content: "Surgical Equipment",
+    },
+    {
+        component: Input,
+        type: "text",
+        content: "Time",
+    },
+    {
+        component: Input,
+        type: "text",
+        content: "Date",
+    },
+    {
+        component: Button,
+        type: "submit",
+        value: "Submit",
+        content: "Submit",
+    },
+];
+
 const FormEditProcedures = () => {
     return (
         <EditorLayout title="Edit">
-            <form
+            <Form
+                items={formContents}
                 action=""
                 method="POST"
-                className="flex flex-col items-center py-12"
-            >
-                <div className="pb-10 ">
-                    <tr>
-                        <th className="md:10rem lg:w-[20rem] text-left">
-                            Pet Name
-                        </th>
-                        <td>
-                            <Input type="text" placeholder="123"></Input>
-                        </td>
-                    </tr>
-                </div>
-                <div>
-                    <Button>Edit</Button>
-                </div>
-            </form>
+                className="flex flex-col items-center py-4 w-full gap-2"
+            />
         </EditorLayout>
     );
 };

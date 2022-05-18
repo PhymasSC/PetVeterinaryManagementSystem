@@ -1,15 +1,23 @@
 import React from "react";
-import StyledForm from "./styles";
+import { v4 as UUIDv4 } from "uuid";
 
-function StyledFormComponent() {
-	return (
-		<StyledForm method="POST">
-			<input type="text" placeholder="Full name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<button>Sign In</button>
-		</StyledForm>
-	);
-}
+const Form = (props) => {
+    const { items, action, method, ...rest } = props;
+    const generateElement = (item) => {
+        const { component, content, ...rest } = item;
+        const Component = component;
+        return (
+            <Component id={UUIDv4()} {...rest}>
+                {content}
+            </Component>
+        );
+    };
 
-export default StyledFormComponent;
+    return (
+        <form action={action} method={method} {...rest}>
+            {items && items.map((item) => generateElement(item))}
+        </form>
+    );
+};
+
+export default Form;

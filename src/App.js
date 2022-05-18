@@ -3,6 +3,7 @@ import Layout from "./layouts";
 import {
     Appointment,
     Procedure,
+    CreateProcedure,
     MedicalRecord,
     MedicalVet,
     MedicalClient,
@@ -20,13 +21,20 @@ function App() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Dashboard />} />
-                    <Route path="appointments" element={<Appointment />} />
-                    <Route path="medical-records" element={<MedicalRecord />} />
-                    <Route path="procedures" element={<Procedure />} />
-                    <Route path="r" element={<MedicalVet />} />
-                    <Route path="pro" element={<ProcedureVet />} />
-                    <Route path="ap" element={<AppointmentVet />} />
-                    <Route path="rc" element={<MedicalClient />} />
+                    <Route path="medical-records">
+                        <Route index element={<MedicalRecord />} />
+                        <Route path="view-vet" element={<MedicalVet />} />
+                        <Route path="view-client" element={<MedicalClient />} />
+                    </Route>
+                    <Route path="procedures">
+                        <Route index element={<Procedure />} />
+                        <Route path="new" element={<CreateProcedure />} />
+                        <Route path="view-vet" element={<ProcedureVet />} />
+                    </Route>
+                    <Route path="appointments">
+                        <Route index element={<Appointment />} />
+                        <Route path="view-vet" element={<AppointmentVet />} />
+                    </Route>
                     <Route path="job" element={<Job />} />
                     <Route path="login" element={<SignIn />} />
                     <Route path="register" element={<SignUp />} />

@@ -6,8 +6,21 @@ import Record from "./Table";
 import Input from "./Input";
 import Form from "./Form";
 import Button from "./Button";
-import Card from "./Widget";
+import Card from "./Card";
+import Widget from "./Widget";
 import { StyledTableProcedure, StyledTableRecord } from "./Table";
 
-export { NavBarItem, SideBar, StyledForm, Clock, Input, Form, Button, Card, Record, StyledTableProcedure, StyledTableRecord };
-
+export {
+    NavBarItem,
+    SideBar,
+    StyledForm,
+    Clock,
+    Input,
+    Form,
+    Button,
+    Card,
+    Widget,
+    Record,
+    StyledTableProcedure,
+    StyledTableRecord,
+};

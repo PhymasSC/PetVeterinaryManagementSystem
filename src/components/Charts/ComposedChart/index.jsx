@@ -12,7 +12,7 @@ import {
 
 const ComposedChartComponent = ({ configuration }) => {
     return (
-        <ResponsiveContainer width="100%" height="93.5%">
+        <ResponsiveContainer width="100%" height="85%">
             <ComposedChart
                 width={configuration.width || 400}
                 height={configuration.height || 400}
