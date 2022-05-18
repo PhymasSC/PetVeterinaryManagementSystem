@@ -19,7 +19,6 @@ export {
     ProcedureVet,
     AppointmentVet,
     Dashboard,
-    MedicalRecord,
     Job,
     SignIn,
     SignUp,
