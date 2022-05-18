@@ -1,56 +1,61 @@
-import React from 'react'
+import React from "react";
+import EditorLayout from "../../layouts/EditorLayout";
 
 const JobComponent = () => {
     return (
-        <>
           <div>
-          </div>
-    
-          <div className="hidden sm:block" aria-hidden="true">
-            <div className="py-5">
-              <div className="border-t border-gray-200" />
-            </div>
+              <EditorLayout title="Job Details">
+              <form action="" method="POST" className="flex flex-col items-center py-12"
+				>
 
-            <div className="col-span-6 sm:col-span-3">
-                          <label htmlFor="Job" className="block text-sm font-medium text-gray-700">
-                            Job Details
-                          </label>
+                <div className="pb-10 ">
+						<tr>
+							<th className="md:10rem lg:w-[20rem] text-left">
+								Staff ID
+							</th>
+							<td>
+								<input
+									type="text"
+									className="rounded-lg w-[20rem] lg:w-[40rem] h-8 px-3 py-4 border-2 border-gray-300"
+								/>
+							</td>
+						</tr>
+					</div>
 
-                <form action="#" method="POST">
-                  <div className="shadow overflow-hidden sm:rounded-md">
-                    <div className="px-4 py-5 bg-white sm:p-6">
-                      <div className="grid grid-cols-6 gap-6">
+                    <div className="pb-10 ">
+						<tr>
+							<th className="md:10rem lg:w-[20rem] text-left">
+								Postion
+							</th>
+							<td>
+								<input
+									type="text"
+									className="rounded-lg w-[20rem] lg:w-[40rem] h-8 px-3 py-4 border-2 border-gray-300"
+								/>
+							</td>
+						</tr>
+					</div>
+                    
+                    <div className="pb-10 ">
+						<tr>
+							<th className="md:10rem lg:w-[20rem] text-left">
+								Salary
+							</th>
+							<td>
+								<input
+									type="number"
+                                    placeholder="without RM"
+									className="rounded-lg w-[20rem] lg:w-[40rem] h-8 px-3 py-4 border-2 border-gray-300"
+								/>
+							</td>
+						</tr>
+					</div>
 
-                        <div className="col-span-6 sm:col-span-3">
-                          <label htmlFor="staff" className="block text-sm font-medium text-gray-700">
-                            Staff ID
-                          </label>
-                          <input type="number" placeholder="number" />
-                        </div>
-    
-                        <div className="col-span-6 sm:col-span-4">
-                          <label htmlFor="position" className="block text-sm font-medium text-gray-700">
-                            Position
-                          </label>
-                          <input type="text" placeholder="position" />
-                        </div>
-
-                        <div className="col-span-6 sm:col-span-3">
-                          <label htmlFor="salary" className="block text-sm font-medium text-gray-700">
-                            Salary
-                          </label>
-                          <input type="number" placeholder="RM:" />
-                        </div>
-    
-                        <button>Sign up</button>
-                      </div>
-                    </div>
-                    </div>
-                    </form>
-                    </div>
-                    </div>
-          
-        </>   
+                        <button>Sign Up <input type="button" value="" /></button>
+                        
+                        </form>
+                        </EditorLayout>
+                      </div>       
       )
     }
 
