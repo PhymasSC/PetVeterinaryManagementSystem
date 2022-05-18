@@ -1,6 +1,6 @@
 import React from "react";
-import { StyledTableRecord } from "../components/Table";
-import { Clock } from "../components/index";
+import { StyledTableRecord } from "../../components/Table";
+import { Clock } from "../../components/index";
 
 const MedicalRecord = () => {
 	return (

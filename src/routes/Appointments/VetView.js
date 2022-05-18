@@ -1,6 +1,6 @@
 import React from "react";
-import { StyledTableAppointment } from "../components/Table";
-import { Clock } from "../components/index";
+import { StyledTableAppointment } from "../../components/Table";
+import { Clock } from "../../components/index";
 
 const Appointment = () => {
     return (

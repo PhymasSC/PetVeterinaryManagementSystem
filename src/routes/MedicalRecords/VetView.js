@@ -1,6 +1,6 @@
 import React from "react";
-import Record from "../components/Table";
-import { Clock } from "../components/index";
+import Record from "../../components/Table";
+import { Clock } from "../../components/index";
 
 const MedicalRecord = () => {
 	return (

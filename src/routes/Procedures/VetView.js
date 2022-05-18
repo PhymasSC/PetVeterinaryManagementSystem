@@ -1,6 +1,6 @@
 import React from "react";
-import { StyledTableProcedure } from "../components/Table";
-import { Clock } from "../components/index";
+import { StyledTableProcedure } from "../../components/Table";
+import { Clock } from "../../components/index";
 // import { Pencil } from "phosphor-react";
 
 const Procedure = () => {
