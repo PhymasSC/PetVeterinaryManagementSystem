@@ -4,6 +4,7 @@ import tw from "twin.macro";
 const StyledForm = styled.form`
 	${tw`bg-[#FFF] text-center rounded py-8 px-5 shadow-md max-w-xs`}
 	& {
+		
 		input {
 			${tw`outline-none border-primary-200 mb-4 w-full border-solid border rounded-md py-2 px-4`}
 			${p => p.warn && tw`border-danger-500`}
@@ -24,3 +25,4 @@ const StyledForm = styled.form`
 `;
 
 export default StyledForm;
+

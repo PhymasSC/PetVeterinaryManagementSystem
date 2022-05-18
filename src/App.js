@@ -4,6 +4,10 @@ import Blogs from "./routes/Blogs";
 import MedicalRecord from "./routes/MedicalRecord";
 import FormEditProcedures from "./routes/FormEditProcedures";
 import Home from "./routes/Home";
+import MedicalRecordOutputVet from "./routes/MedicalRecordOutputVet";
+import ProcedureOutputVet from "./routes/ProcedureOutputVet";
+import AppointmentOutputVet from "./routes/AppointmentOutputVet";
+import MediaclRecordOutputClient from "./routes/MedicalRecordOutputClient";
 
 function App() {
 	return (
@@ -15,6 +19,10 @@ function App() {
 					<Route path="mr" element={<MedicalRecord />} />
 					<Route path="p" element={<FormEditProcedures />} />
 					<Route path="*" element={<Home />} />
+					<Route path="r" element={<MedicalRecordOutputVet />} />
+					<Route path="pro" element={<ProcedureOutputVet />} />
+					<Route path="ap" element={<AppointmentOutputVet />} />
+					<Route path="rc" element={<MediaclRecordOutputClient />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

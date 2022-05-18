@@ -2,7 +2,7 @@ import React from "react";
 import { Clock } from "../components/index";
 const FormEditProcedures = () => {
 	return (
-		<div className=" w-[93%]">
+		<div className="w-[93%]">
 			<div className="flex justify-between">
 				<h1 className="font-medium text-2xl ml-10 pt-12 pb-10">
 					Edit Procedure
