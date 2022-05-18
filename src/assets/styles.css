@@ -1058,6 +1058,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 
+.hover\:border-primary-500:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(78 205 213 / var(--tw-border-opacity));
+}
+
+
 .hover\:bg-transparent:hover {
   background-color: transparent;
 }
@@ -1096,6 +1102,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:text-primary-900:hover {
   --tw-text-opacity: 1;
   color: rgb(14 67 102 / var(--tw-text-opacity));
+}
+
+
+.focus\:border-primary-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(78 205 213 / var(--tw-border-opacity));
 }
 
 
