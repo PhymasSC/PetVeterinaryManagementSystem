@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Clock, Cursor } from "phosphor-react";
+import ClockLabel from "./styles";
 
 const DateTime = () => {
 	const dateFormat = { month: "short", day: "2-digit", weekday: "long" };
@@ -21,7 +23,10 @@ const DateTime = () => {
 	// `{a} {b}` => Hello World
 	return (
 		<>
-			{time} {date}
+			<ClockLabel>
+				<Clock size={24} color="#93b0c8" weight="duotone" />
+				{time} {date}
+			</ClockLabel>
 		</>
 	);
 };
