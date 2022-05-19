@@ -1,17 +1,13 @@
 import React from "react";
 import { StyledTableRecord } from "../../components/Table";
-import Header from "../../layouts/Header";
+import EditorLayout from "../../layouts/EditorLayout";
 
 const MedicalRecord = () => {
     return (
         <>
-            <Header title="Medical Record" />
-            {/* <div className="flex"> */}
-            <StyledTableRecord />
-            {/* <div>
-					<Pencil />
-				</div> */}
-            {/* </div> */}
+            <EditorLayout title="Medical Record">
+                <StyledTableRecord />
+            </EditorLayout>
         </>
     );
 };

@@ -1,20 +1,15 @@
 import React from "react";
 import { StyledTableProcedure } from "../../components/Table";
-import Header from "../../layouts/Header";
-// import { Pencil } from "phosphor-react";
+import EditorLayout from "../../layouts/Header";
 
 const Procedure = () => {
-	return (
-		<>
-			<Header title="Manage Procedure" />
-			{/* <div className="flex"> */}
-				<StyledTableProcedure />
-			{/* <div>
-					<Pencil />
-				</div> */}
-			{/* </div> */}
-		</>
-	);
+    return (
+        <>
+            <EditorLayout title="Procedure">
+                <StyledTableProcedure />
+            </EditorLayout>
+        </>
+    );
 };
 
 export default Procedure;

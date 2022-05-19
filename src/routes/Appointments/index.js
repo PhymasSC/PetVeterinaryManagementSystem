@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../../layouts/Header";
+import { EditorLayout } from "../../layouts/styles";
 
 const Appointment = () => {
-    return <Header title="Appointment" />;
+    return <EditorLayout title="Appointment" />;
 };
 
 export default Appointment;

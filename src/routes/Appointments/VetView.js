@@ -1,12 +1,13 @@
 import React from "react";
 import { StyledTableAppointment } from "../../components/Table";
-import Header from "../../layouts/Header";
+import EditorLayout from "../../layouts/EditorLayout";
 
 const Appointment = () => {
     return (
         <>
-            <Header title="Manage Appointment" />
-			<StyledTableAppointment />
+            <EditorLayout title="Appointment">
+                <StyledTableAppointment />
+            </EditorLayout>
         </>
     );
 };

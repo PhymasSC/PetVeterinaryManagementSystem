@@ -1,12 +1,30 @@
 import React from "react";
-import EditorLayout from "./../layouts/EditorLayout"
-import { Clock } from "./../components/index";
+import EditorLayout from "../../layouts/EditorLayout";
+import { Input, Form, Button } from "../../components";
+import Step from "../../components/Step";
+
+const content = [
+    { component: Input, content: "Staff ID" },
+    { component: Input, content: "Position" },
+    { component: Input, content: "Salary" },
+    { component: Button, type: "submit", content: "Sign up" },
+];
 
 const JobComponent = () => {
     return (
-          <div>
-              <EditorLayout title="Job Details">
-              <form action="" method="POST" className="flex flex-col items-center py-12"
+        <>
+            <EditorLayout title="Job Details">
+				<Step />
+                <Form
+                    items={content}
+                    action=""
+                    method="post"
+                    className="flex flex-col items-center py-4 w-full gap-2"
+                />
+            </EditorLayout>
+        </>
+        //   <div>
+        /* <form action="" method="POST" className="flex flex-col items-center py-12"
 				>
 
                 <div className="pb-10 ">
@@ -54,10 +72,10 @@ const JobComponent = () => {
 
                         <button>Sign Up <input type="button" value="" /></button>
                         
-                        </form>
-                        </EditorLayout>
-                      </div>       
-      )
-    }
+                        </form> */
 
-    export default JobComponent;
+        //   </div>
+    );
+};
+
+export default JobComponent;
