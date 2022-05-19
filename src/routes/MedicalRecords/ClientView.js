@@ -1,24 +1,19 @@
 import React from "react";
 import { StyledTableRecord } from "../../components/Table";
-import { Clock } from "../../components/index";
+import Header from "../../layouts/Header";
 
 const MedicalRecord = () => {
-	return (
-		<>
-			<div>
-				<h1>Medical Record</h1>
-				<Clock />
-			</div>
-			{/* <div className="flex"> */}
-			<div>
-				<StyledTableRecord />
-			</div>
-			{/* <div>
+    return (
+        <>
+            <Header title="Medical Record" />
+            {/* <div className="flex"> */}
+            <StyledTableRecord />
+            {/* <div>
 					<Pencil />
 				</div> */}
-			{/* </div> */}
-		</>
-	);
+            {/* </div> */}
+        </>
+    );
 };
 
 export default MedicalRecord;

@@ -1,19 +1,14 @@
 import React from "react";
 import { StyledTableProcedure } from "../../components/Table";
-import { Clock } from "../../components/index";
+import Header from "../../layouts/Header";
 // import { Pencil } from "phosphor-react";
 
 const Procedure = () => {
 	return (
 		<>
-			<div>
-				<h1>Manage Procedures</h1>
-				<Clock />
-			</div>
+			<Header title="Manage Procedure" />
 			{/* <div className="flex"> */}
-			<div>
 				<StyledTableProcedure />
-			</div>
 			{/* <div>
 					<Pencil />
 				</div> */}

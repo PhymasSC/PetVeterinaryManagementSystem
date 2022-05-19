@@ -1,14 +1,11 @@
 import React from "react";
 import Record from "../../components/Table";
-import { Clock } from "../../components/index";
+import Header from "../../layouts/Header";
 
 const MedicalRecord = () => {
 	return (
 		<>
-			<div>
-				<h1>Manage Medical Records</h1>
-				<Clock />
-			</div>
+			<Header title="Manage Medical Record" />
 			<Record />
 		</>
 	);

@@ -155,4 +155,4 @@ const FormCreateProcedures = () => {
 	);
 };
 
-export default CreateProcedureComponent;
+export default FormCreateProcedures;

@@ -1,8 +1,18 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 
-const InputStyle = styled.input`
-    ${tw`rounded-lg w-[20rem] lg:w-[40rem] h-8 px-3 py-4 border-2 border-gray-300 outline-none hover:border-primary-500 focus:border-primary-500`}
+const Input = styled.input`
+    ${tw`w-full px-0 pt-3.5 pb-0 text-sm placeholder-transparent border-none focus:ring-0 outline-none`}
 `;
 
-export default InputStyle;
+const InputContainer = styled.label`
+    ${tw`relative block p-3 border-2 border-gray-200 rounded-lg`}
+`;
+
+const InputPlaceholder = styled.span`
+    ${tw`absolute text-xs font-medium text-gray-500 transition-all left-3`}
+`;
+
+export default Input;
+
+export { InputContainer, InputPlaceholder };

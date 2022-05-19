@@ -16,7 +16,7 @@ const HeaderLayout = styled.div`
 
     & {
         .title {
-            ${tw`font-medium text-2xl ml-10`}
+            ${tw`font-medium text-2xl ml-7`}
         }
     }
 `;
