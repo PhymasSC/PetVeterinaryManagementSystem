@@ -2,9 +2,64 @@ import React, { useState } from "react";
 import logo from "./../../assets/img/logo.png";
 import { House, Notebook, Book, Calendar } from "phosphor-react";
 import { Link } from "react-router-dom";
-import NavbarItem from "../NavbarItem/styles";
+import NavbarItem from "../NavbarItem";
 
-const SidebarComponent = (props) => {
+const navbar = [
+    {
+        location: "/",
+        icon: (
+            <House
+                color="currentColor"
+                weight="duotone"
+                size={20}
+                alt="Homepage"
+            />
+        ),
+        name: "Dashboard",
+        notificationCount: 5,
+    },
+    {
+        location: "/appointments",
+        icon: (
+            <Calendar
+                color="currentColor"
+                weight="duotone"
+                size={20}
+                alt="Appointment"
+            />
+        ),
+        name: "Appointment",
+        notificationCount: 5,
+    },
+    {
+        location: "/medical-records",
+        icon: (
+            <Notebook
+                color="currentColor"
+                weight="duotone"
+                size={20}
+                alt="Medical Record"
+            />
+        ),
+        name: "Medical Record",
+        notificationCount: 5,
+    },
+    {
+        location: "/procedures",
+        icon: (
+            <Book
+                color="currentColor"
+                weight="duotone"
+                size={20}
+                alt="Procedure"
+            />
+        ),
+        name: "Procedure",
+        notificationCount: 5,
+    },
+];
+
+const SidebarComponent = props => {
     const [isMenuOn, setIsMenuOn] = useState(false);
 
     return (
@@ -38,63 +93,13 @@ const SidebarComponent = (props) => {
                                     </svg>
                                 </button>
                             </div>
+
                             <div class="mt-5 flex flex-grow flex-col px-4">
                                 <nav class="flex-1 space-y-1 bg-primary-500">
                                     <ul className="mt-12">
-                                        <NavbarItem active>
-                                            <div>
-                                                <House
-                                                    color="currentColor"
-                                                    weight="duotone"
-                                                    size={20}
-                                                    alt="Homepage"
-                                                />
-                                                <Link to="/">Dashboard</Link>
-                                            </div>
-                                            <div>5</div>
-                                        </NavbarItem>
-                                        <NavbarItem>
-                                            <div>
-                                                <Calendar
-                                                    color="currentColor"
-                                                    weight="duotone"
-                                                    size={20}
-                                                    alt="Appointment"
-                                                />
-                                                <Link to="/appointments">
-                                                    Appointment
-                                                </Link>
-                                            </div>
-                                            <div>5</div>
-                                        </NavbarItem>
-                                        <NavbarItem>
-                                            <div>
-                                                <Notebook
-                                                    color="currentColor"
-                                                    weight="duotone"
-                                                    size={20}
-                                                    alt="Medical Record"
-                                                />
-                                                <Link to="/medical-records">
-                                                    Medical Record
-                                                </Link>
-                                            </div>
-                                            <div>5</div>
-                                        </NavbarItem>
-                                        <NavbarItem>
-                                            <div>
-                                                <Book
-                                                    color="currentColor"
-                                                    weight="duotone"
-                                                    size={20}
-                                                    alt="Procedure"
-                                                />
-                                                <Link to="/procedures">
-                                                    Procedure
-                                                </Link>
-                                            </div>
-                                            <div>5</div>
-                                        </NavbarItem>
+                                        {navbar.map(nav => {
+                                            return <NavbarItem items={nav} />;
+                                        })}
                                     </ul>
                                 </nav>
                             </div>
