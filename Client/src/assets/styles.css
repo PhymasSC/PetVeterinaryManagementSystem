@@ -966,6 +966,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 2.5rem;
 }
 
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1066,6 +1070,23 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.text-cyan-500 {
+  --tw-text-opacity: 1;
+  color: rgb(6 182 212 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.decoration-cyan-500 {
+  text-decoration-color: #06b6d4;
+}
+
+.decoration-1 {
+  text-decoration-thickness: 1px;
 }
 
 .placeholder-transparent::placeholder {

@@ -1,0 +1,28 @@
+{
+    "name": "petveterinarymanagementsystem",
+    "version": "1.0.0",
+    "main": ".prettierrc.js",
+    "scripts": {
+        "start": "nodemon index.js"
+    },
+    "proxy": "http://localhost:3001",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/PhymasSC/PetVeterinaryManagementSystem.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/PhymasSC/PetVeterinaryManagementSystem/issues"
+    },
+    "homepage": "https://github.com/PhymasSC/PetVeterinaryManagementSystem#readme",
+    "description": "",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.18.1",
+        "mysql": "^2.18.1",
+        "passport-local": "^1.0.0",
+        "uuid": "^8.3.2"
+    }
+}

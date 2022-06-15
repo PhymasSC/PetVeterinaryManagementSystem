@@ -1,18 +1,21 @@
 import React from "react";
-import Input, { InputContainer, InputPlaceholder } from "./styles";
+import { InputContainer, InputPlaceholder } from "./styles";
 
 const InputComponent = (props, configuration) => {
+    const { children, id, ...rest } = props;
+    console.log(rest);
     return (
         <InputContainer htmlFor={configuration.labelName || ""}>
-            <Input
+            <input
                 className="peer"
-                id={configuration.id}
+                id={id}
                 type={configuration.type || "text"}
                 placeholder=" "
+                {...rest}
             />
 
             <InputPlaceholder className="peer-focus:text-xs peer-focus:top-3 peer-focus:translate-y-0 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-sm">
-                {props.children}
+                {children}
             </InputPlaceholder>
         </InputContainer>
     );
