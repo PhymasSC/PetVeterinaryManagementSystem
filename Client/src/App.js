@@ -11,6 +11,7 @@ import {
     MedicalClient,
     ProcedureVet,
     AppointmentVet,
+    // AppointmentCalender,
     Dashboard,
     Job,
     Pet,
@@ -41,8 +42,11 @@ function App() {
                     </Route>
                     <Route path="appointments">
                         <Route index element={<AppointmentVet />} />
+                        {/* <Route
+                            path="calender"
+                            element={<AppointmentCalender />}
+                        /> */}
                     </Route>
-                    {/* <Route path="*" element={<Dashboard />} /> */}
                 </Route>
                 <Route path="login" element={<SignIn />} />
                 <Route path="register">

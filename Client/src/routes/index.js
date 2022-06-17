@@ -8,6 +8,7 @@ import MedicalEdit from "./MedicalRecords/Edit";
 import MedicalClient from "./MedicalRecords/ClientView";
 import MedicalVet from "./MedicalRecords/VetView";
 import AppointmentVet from "./Appointments/VetView";
+// import AppointmentCalender from "./Appointments/calender/appointment";
 import Job from "./Register/Job";
 import Pet from "./Register/Pet";
 import SignIn from "./Login/login";
@@ -23,6 +24,7 @@ export {
     MedicalVet,
     ProcedureVet,
     AppointmentVet,
+    // AppointmentCalender,
     Dashboard,
     Job,
     Pet,

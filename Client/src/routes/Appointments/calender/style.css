@@ -1,0 +1,87 @@
+#EventLog b {
+    color: #388e3c;
+  }
+  
+  hr {
+    margin: 1px 10px 1px 0px;
+    border-top: 1px solid #eee;
+  }
+  
+  .year-property-panel td {
+    padding-bottom: 1rem;
+  }
+  
+  /* custom code end*/
+
+ .e-schedule .e-schedule-toolbar .e-icon-schedule-print::before {
+    content: '\e973';
+  }
+  
+  .e-schedule .e-schedule-toolbar .e-icon-schedule-pdf::before {
+    content: '\e7c8';
+  }
+  
+  .custom-field-row {
+    margin-bottom: 20px;
+  }
+  
+  .multi-prop div {
+    padding-left: 0;
+    padding-top: 0;
+  }
+  
+  .year-view.e-schedule .e-timeline-year-view .e-resource-column-table, .year-view.e-schedule .e-timeline-year-view .e-resource-left-td {
+    width: 120px;
+  }
+  
+  .inline-edit.e-schedule .e-timeline-view .e-resource-left-td, .inline-edit.e-schedule .e-timeline-month-view .e-resource-left-td {
+    width: 150px;
+  } 
+
+/* // import styled from "styled-components";
+// import tw from "twin.macro";
+
+// const style = styled.div`
+//     ${tw`inline-flex items-center px-8 py-3 text-white bg-primary-500 border border-primary-500 rounded hover:bg-transparent hover:text-primary-500 active:text-primary-500 focus:outline-none focus:ring`}
+//     & {
+//         .inline-edit.e-schedule .e-timeline-view .e-resource-left-td,
+//         .inline-edit.e-schedule .e-timeline-month-view .e-resource-left-td {
+//             ${tw`w-[150px]`}
+//         }
+
+//         #EventLog b {
+//             ${tw`text-[#388e3c]`}
+//         }
+
+//         hr {
+//             ${tw`mt-[1px] mb-[10px] ml-[1px] mr-[0px] border border-solid border-[#eee]`}
+//         }
+
+//         .year-property-panel td {
+//             ${tw`pb-[1rem]`}
+//         }
+
+//         .e-schedule .e-schedule-toolbar .e-icon-schedule-print::before {
+//             ${tw`content-['\e973']`}
+//         }
+
+//         .e-schedule .e-schedule-toolbar .e-icon-schedule-pdf::before {
+//             ${tw`content-['\e7c8']`}
+//         }
+
+//         .custom-field-row {
+//             ${tw`mb-[20px]`}
+//         }
+
+//         .multi-prop div {
+//             ${tw`pl-0 pt-0`}
+//         }
+
+//         .year-view.e-schedule .e-timeline-year-view .e-resource-column-table,
+//         .year-view.e-schedule .e-timeline-year-view .e-resource-left-td {
+//             ${tw`w-[120px]`}
+//         }
+//     }
+// `;
+
+// export default style; */
