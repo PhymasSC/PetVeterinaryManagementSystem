@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 // import EditorLayout from "../../layouts/EditorLayout";
 import { LayoutLoginRegis } from "../../layouts/EditorLayout";
+import { useNavigate, Link } from "react-router-dom";
+import EditorLayout from "../../layouts/EditorLayout";
 import PrimaryButton from "../../components/Button";
 import Axios from "axios";
 import doggieLogin from "../../assets/img/doggyLogin.png";
@@ -11,28 +13,21 @@ import doggieLogin from "../../assets/img/doggyLogin.png";
 // ];
 
 // const [items, setItems] = useState([]);
-
-// fetch("http://localhost:3001/api/validate", {
-//     method: "GET",
-//     headers: {
-//         "Content-Type": "application/json",
-//     },
-// })
-//     .then(res => res.json())
-//     .then(json => setItems(json));
 const SignIn = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const submitPost = () => {
-        Axios.post("http://localhost:3001/auth/login", {
+    const navigate = useNavigate();
+
+    const submitPost = e => {
+        e.preventDefault();
+        Axios.post("http://localhost:3001/auth/login/", {
             username: username,
             password: password,
+        }).then(res => {
+            if (res.status === 202) navigate("/Home");
+            console.log(res.status);
         });
     };
-
-    // if (result.email === email && result.password === password) {
-    //     res.redirect("http://localhost:3000/");
-    // }
 
     return (
         <>
@@ -101,13 +96,12 @@ const SignIn = () => {
                     </div>
 
                     <p className="pt-10">Doesn't have an account?</p>
-                    <a
-                        href="../Register"
-                        target="_blank"
+                    <Link
+                        to="/Register"
                         className="underline decoration-1 decoration-cyan-500 text-cyan-500 pt"
                     >
                         Sign up
-                    </a>
+                    </Link>
                 </form>
                 {/* ))} */}
                 {/* </EditorLayout> */}

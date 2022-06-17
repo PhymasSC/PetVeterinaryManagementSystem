@@ -9,6 +9,9 @@ import Button from "./Button";
 import Card from "./Card";
 import Widget from "./Widget";
 import Step from "./Step";
+import PrivateRoute from "./Routes/PrivateRoute.js";
+import PublicRoute from "./Routes/PublicRoute.js";
+
 import { StyledTableProcedure, StyledTableRecord } from "./Table";
 
 export {
@@ -25,4 +28,6 @@ export {
     StyledTableProcedure,
     StyledTableRecord,
     Step,
+    PrivateRoute,
+    PublicRoute,
 };

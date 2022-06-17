@@ -1,41 +1,47 @@
 require("dotenv").config();
 const express = require("express");
-const cors = require("cors");
-const PORT = process.env.PORT || 3001;
+const session = require("express-session");
 const app = express();
-const db = require("./config/database");
+const cors = require("cors");
+const db = require("./config/database.js");
+const PORT = process.env.PORT || 3001;
 const passport = require("passport");
-const initializePassport = require("./passport-config");
-
-// import routers
+const initializePassport = require("./config/passport-config.js");
+// Setup routers variables
 const authRouter = require("./routes/auth.js");
-// const {check, validationResult} = require('express-validator');
+
+initializePassport(
+    passport,
+    (username) => {
+        return db
+            .promise()
+            .query("SELECT * FROM user WHERE name = ? LIMIT 1", [username])
+            .then((res) => res[0]);
+    },
+    (id) => {
+        return db
+            .promise()
+            .query("SELECT * FROM user WHERE id = ? LIMIT 1", [id])
+            .then((res) => res[0]);
+    }
+);
+
+app.use(express.urlencoded({ extended: false }));
+app.use(passport.initialize()); // init passport on every route call
+app.use(
+    session({
+        secret: "secret",
+        resave: false,
+        saveUninitialized: true,
+    })
+);
+app.use(passport.session()); //allow passport to use "express-session"
 app.use(cors());
 app.use(express.json());
+
+// Set routers
 app.use("/auth", authRouter);
 
-app.post("/api/validate", (req, res) => {
-    const email = req.body.email;
-    const password = req.body.password;
-    // check('email').notEmpty();
-    // check('password').notEmpty();
+//Middleware
 
-    db.query(
-        "SELECT userid, email, password FROM user WHERE email=?",
-        email,
-        (err, result) => {
-            if (err) console.log(err);
-            result = Object.values(JSON.parse(JSON.stringify(result)));
-            // res.send(result);
-            if (result[0].email === email && result[0].password === password) {
-                res.redirect(200, "/to");
-                //     // res.redirect("/");
-                //     // res.redirect("./Client/src/routes/Dashboard");
-            }
-        }
-    );
-});
-
-app.listen(PORT, () => {
-    console.log(`Server is running on ${PORT}`);
-});
+app.listen(PORT, () => console.log(`Server is running on ${PORT}`));

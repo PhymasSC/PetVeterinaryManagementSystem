@@ -1,31 +1,26 @@
-const passport = require("passport-local");
+const passport = require("passport");
 const express = require("express");
 const router = express.Router();
-const db = require("./../config/database");
+const db = require("../config/database");
 
-router.post("/login", (req, res) => {
-    passport.authenticate("local"),
-        (req, res) => {
-            console.log("req.sessionID:", req.sessionID);
-            res.status(200).json({ user: req.user });
-        };
+router.get(() => {});
+
+router.post("/login", (req, res, next) => {
+    passport.authenticate("local", function (err, user, info) {
+        if (err) return res.status(505).send("Server Error");
+        if (!user) return res.status(400).send(info);
+        req.logIn(user, (err) => {
+            if (err) return next(err);
+            return res.status(202).send(info);
+        });
+    })(req, res, next);
 });
 
-router.get(
-    "/status",
-    (req, res) =>
-        (req.isAuthenticated() && res.status(200).json({ user: req.user })) ||
-        res.status(200).json({
-            user: {
-                accessId: 0,
-                type: "",
-                userId: 0,
-                username: "",
-            },
-        })
-);
+router.get("/status", (req, res) => {
+    res.send(req.body.user || "FAILED TO GET");
+});
 
-router.post("/create", (req, res) => {
+router.post("/register", (req, res) => {
     const username = req.body.username;
     const phoneno = req.body.phoneno;
     const password = req.body.password;
@@ -37,15 +32,14 @@ router.post("/create", (req, res) => {
             ? "veterinary team"
             : "client";
     db.query(
-        "INSERT INTO user (username, phoneno, password, icno, address, email, job_detail) VALUES (?, ?, ?, ?, ?, ?, ?)",
+        "INSERT INTO user (name, phone_no, password, ic_no, address, email, job_detail) VALUES (?, ?, ?, ?, ?, ?, ?)",
         [username, phoneno, password, icno, address, email, job_detail],
         (err, result) => {
             if (err) {
-                console.log(err);
+                res.send(email);
             }
-            console.log(`Result: ${result}`);
-            // window.location.replace = "http://localhost:3000/login";
-            res.redirect("http://localhost:3000/login");
+
+            res.send(result);
         }
     );
 });

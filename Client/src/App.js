@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { PrivateRoute, PublicRoute } from "./components";
 import Layout from "./layouts";
 import {
     Procedure,
