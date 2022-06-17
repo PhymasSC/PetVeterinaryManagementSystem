@@ -21,8 +21,12 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
+                <Route path="/" element={<SignIn />} />
+                <Route path="*" element={<SignIn />} />
                 <Route path="/" element={<Layout />}>
-                    <Route index element={<Dashboard />} />
+                    <Route path="/home">
+                        <Route index element={<Dashboard />} />
+                    </Route>
                     <Route path="medical-records">
                         <Route index element={<MedicalRecord />} />
                         <Route path="view-vet" element={<MedicalVet />} />
@@ -37,7 +41,7 @@ function App() {
                     <Route path="appointments">
                         <Route index element={<AppointmentVet />} />
                     </Route>
-                    <Route path="*" element={<Dashboard />} />
+                    {/* <Route path="*" element={<Dashboard />} /> */}
                 </Route>
                 <Route path="login" element={<SignIn />} />
                 <Route path="register">

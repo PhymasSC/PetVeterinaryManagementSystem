@@ -83,12 +83,12 @@ const PieChartComponent = (props) => {
     );
 
     return (
-        <PieChart width={800} height={400}>
+        <PieChart width={800} height={400} >
             <Pie
                 activeIndex={activeIndex}
                 activeShape={renderActiveShape}
                 data={props.data}
-                cx={120}
+                cx={160}
                 cy={200}
                 fill="#277F99"
                 innerRadius={60}
@@ -96,6 +96,7 @@ const PieChartComponent = (props) => {
                 paddingAngle={5}
                 dataKey="value"
                 onMouseEnter={onPieEnter}
+                {...props}
             ></Pie>
         </PieChart>
     );

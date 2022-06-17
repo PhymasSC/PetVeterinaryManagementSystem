@@ -4,29 +4,18 @@ import Card from "../Card";
 import ComposedChart from "../Charts/ComposedChart";
 import PieChart from "../Charts/PieChart";
 
-const CardUi = ({ cardTitle, chartConfig }) => {
+const CardUi = props => {
+    const { cardTitle, chartConfig, ...rest } = props;
     return (
         <>
-            {/* <Card>
+            <Card {...rest}>
                 <Header>{cardTitle}</Header>
                 {chartConfig.type === "composedChart" && (
                     <ComposedChart configuration={chartConfig} />
                 )}
-                {cartConfig.type === "pieChart" && (
+                {chartConfig.type === "pieChart" && (
                     <PieChart data={chartConfig.data} />
                 )}
-            </Card> */}
-
-            <Card>
-                <Header>{cardTitle}</Header>
-                {chartConfig.type === "composedChart" && (
-                    <ComposedChart configuration={chartConfig} />
-                )}
-                <div>
-                    {chartConfig.type === "pieChart" && (
-                        <PieChart data={chartConfig.data} />
-                    )}
-                </div>
             </Card>
         </>
     );

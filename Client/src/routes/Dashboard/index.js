@@ -53,10 +53,116 @@ const Home = () => {
     return (
         <>
             <Header title="Dashboard" />
-            <Widget
-                cardTitle="Appointment"
-                chartConfig={configuration}
-            ></Widget>
+            <div className="flex justify-around">
+                <Widget
+                    cardTitle="Appointment"
+                    chartConfig={configuration}
+                    className="!w-[42%] !m-0"
+                ></Widget>
+                <div className="w-[52%] bg-white shadow-md rounded-xl p-10 overflow-y-auto h-[35rem]">
+                    <table>
+                        <div className="border-b-[1px] pb-2 pt-4">
+                            <tr>
+                                <td className="pr-6">Picture</td>
+                                <td className="pr-10">Kim Yi Han</td>
+                                <td className="pr-4">12 Jan 2022</td>
+                                <td className="pr-4">10:30</td>
+                                <td className="">Appointment</td>
+                            </tr>
+                        </div>
+                        <div className="border-b-[1px] pb-4 pt-4">
+                            <tr>
+                                <td className="pr-6">Picture</td>
+                                <td className="pr-10">Jane</td>
+                                <td className="pr-4">12 Jan 2022</td>
+                                <td className="pr-4">11:30</td>
+                                <td className="">Appointment</td>
+                            </tr>
+                        </div>
+                        <div className="border-b-[1px] pb-4 pt-4">
+                            <tr>
+                                <td className="pr-6">Picture</td>
+                                <td className="pr-10">Tan Qian En</td>
+                                <td className="pr-4">12 Jan 2022</td>
+                                <td className="pr-4">12:30</td>
+                                <td className="">Appointment</td>
+                            </tr>
+                        </div>
+                        <div className="border-b-[1px] pb-4 pt-4">
+                            <tr>
+                                <td className="pr-6">Picture</td>
+                                <td className="pr-10">John</td>
+                                <td className="pr-4">12 Jan 2022</td>
+                                <td className="pr-4">13:00</td>
+                                <td className="">Appointment</td>
+                            </tr>
+                        </div>
+                        <div className="border-b-[1px] pb-4 pt-4">
+                            <tr>
+                                <td className="pr-6">Picture</td>
+                                <td className="pr-10">Audrey</td>
+                                <td className="pr-4">12 Jan 2022</td>
+                                <td className="pr-4">14:25</td>
+                                <td className="">Appointment</td>
+                            </tr>
+                        </div>
+                        <div className="border-b-[1px] pb-4 pt-4">
+                            <tr>
+                                <td className="pr-6">Picture</td>
+                                <td className="pr-10">Andrew</td>
+                                <td className="pr-4">12 Jan 2022</td>
+                                <td className="pr-4">15:20</td>
+                                <td className="">Appointment</td>
+                            </tr>
+                        </div>
+                        <div className="border-b-[1px] pb-4 pt-4">
+                            <tr>
+                                <td className="pr-6">Picture</td>
+                                <td className="pr-10">Leroy</td>
+                                <td className="pr-4">12 Jan 2022</td>
+                                <td className="pr-4">16:20</td>
+                                <td className="">Appointment</td>
+                            </tr>
+                        </div>
+                        <div className="border-b-[1px] pb-4 pt-4">
+                            <tr>
+                                <td className="pr-6">Picture</td>
+                                <td className="pr-10">Lan Xin Yue</td>
+                                <td className="pr-4">12 Jan 2022</td>
+                                <td className="pr-4">17:00</td>
+                                <td className="">Appointment</td>
+                            </tr>
+                        </div>
+                        <div className="border-b-[1px] pb-4 pt-4">
+                            <tr>
+                                <td className="pr-6">Picture</td>
+                                <td className="pr-10">Muhammad Ali</td>
+                                <td className="pr-4">12 Jan 2022</td>
+                                <td className="pr-4">17:30</td>
+                                <td className="">Appointment</td>
+                            </tr>
+                        </div>
+                        <div className="border-b-[1px] pb-4 pt-4">
+                            <tr>
+                                <td className="pr-6">Picture</td>
+                                <td className="pr-10">Susan</td>
+                                <td className="pr-4">12 Jan 2022</td>
+                                <td className="pr-4">18:00</td>
+                                <td className="">Appointment</td>
+                            </tr>
+                        </div>
+                        <div className="border-b-[1px] pb-4 pt-4">
+                            <tr>
+                                <td className="pr-6">Picture</td>
+                                <td className="pr-10">Stanly</td>
+                                <td className="pr-4">12 Jan 2022</td>
+                                <td className="pr-4">20:00</td>
+                                <td className="">Appointment</td>
+                            </tr>
+                        </div>
+                    </table>
+                </div>
+            </div>
             <div className="flex gap-2 flex-wrap">
                 <Widget cardTitle="Appointment" chartConfig={chartData} />
                 <Widget cardTitle="Appointment" chartConfig={chartData} />

@@ -262,11 +262,6 @@ const StyledTableAppointment = () => {
                                 <br />
                                 <label>Date</label>
                             </td>
-                            <td>
-                                <div>
-                                    <input type="checkbox" id="row_1" />
-                                </div>
-                            </td>
                         </tr>
                     </tbody>
                 </table>
