@@ -1,17 +1,16 @@
-// require("dotenv").config();
+require("dotenv").config();
 // const express = require("express");
 // const app = express();
 
 const mysql = require("mysql");
 const dbconnection = mysql.createPool({
-    host: "mysql8002.site4now.net",
-    user: "a883ba_petvet",
-    password: "pvms3999",
-    database: "db_a883ba_petvet",
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PW,
+    database: process.env.DB_NAME,
 });
 
 module.exports = dbconnection;
-
 
 // app.get("/api", (req, res) => {
 //     res.json({ message: "Hello from server!" });

@@ -53,14 +53,14 @@ const Home = () => {
     return (
         <>
             <Header title="Dashboard" />
-            <div className="flex gap-2 flex-wrap">
-                <Widget cardTitle="Appointment" chartConfig={chartData} />
-                <Widget cardTitle="Appointment" chartConfig={chartData} />
-            </div>
             <Widget
                 cardTitle="Appointment"
                 chartConfig={configuration}
             ></Widget>
+            <div className="flex gap-2 flex-wrap">
+                <Widget cardTitle="Appointment" chartConfig={chartData} />
+                <Widget cardTitle="Appointment" chartConfig={chartData} />
+            </div>
         </>
     );
 };

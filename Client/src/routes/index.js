@@ -4,6 +4,7 @@ import ProcedureVet from "./Procedures/VetView";
 import CreateProcedure from "./Procedures/Create";
 import Dashboard from "./Dashboard";
 import MedicalRecord from "./MedicalRecords";
+import MedicalEdit from "./MedicalRecords/Edit";
 import MedicalClient from "./MedicalRecords/ClientView";
 import MedicalVet from "./MedicalRecords/VetView";
 import AppointmentVet from "./Appointments/VetView";
@@ -17,6 +18,7 @@ export {
     Procedure,
     CreateProcedure,
     MedicalRecord,
+    MedicalEdit,
     MedicalClient,
     MedicalVet,
     ProcedureVet,

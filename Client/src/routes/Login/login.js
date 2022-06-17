@@ -1,31 +1,31 @@
 import React, { useState } from "react";
-import EditorLayout from "../../layouts/EditorLayout";
+// import EditorLayout from "../../layouts/EditorLayout";
+import { LayoutLoginRegis } from "../../layouts/EditorLayout";
 import PrimaryButton from "../../components/Button";
 import Axios from "axios";
+import doggieLogin from "../../assets/img/doggyLogin.png";
 // const content = [
 //     { component: Input, content: "Userame" },
 //     { component: Input, content: "Password" },
 //     { component: Button, type: "submit", content: "Log in" },
 // ];
 
+// const [items, setItems] = useState([]);
+
+// fetch("http://localhost:3001/api/validate", {
+//     method: "GET",
+//     headers: {
+//         "Content-Type": "application/json",
+//     },
+// })
+//     .then(res => res.json())
+//     .then(json => setItems(json));
 const SignIn = () => {
-    // const [items, setItems] = useState([]);
-
-    // fetch("http://localhost:3001/api/validate", {
-    //     method: "GET",
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //     },
-    // })
-    //     .then(res => res.json())
-    //     .then(json => setItems(json));
-
-    const [email, setEmail] = useState("");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-
     const submitPost = () => {
-        Axios.post("http://localhost:3001/api/validate", {
-            email: email,
+        Axios.post("http://localhost:3001/auth/login", {
+            username: username,
             password: password,
         });
     };
@@ -36,7 +36,8 @@ const SignIn = () => {
 
     return (
         <>
-            <EditorLayout title="Login">
+            <LayoutLoginRegis title="Login">
+                {/* <EditorLayout title="Login"> */}
                 {/* <Form
                     items={content}
                     action=""
@@ -44,6 +45,14 @@ const SignIn = () => {
                     className="flex flex-col items-center py-4 w-full gap-2"
                 /> */}
                 {/* {items.map(item => ( */}
+                <div className="flex justify-center mt-3">
+                    <img
+                        src={doggieLogin}
+                        draggable="false"
+                        width={400}
+                        height={350}
+                    />
+                </div>
                 <form className="flex flex-col items-center py-12">
                     {/* {items.map(
                         item => (
@@ -52,16 +61,16 @@ const SignIn = () => {
                     )} */}
                     <div className="pb-10 ">
                         <tr>
-                            <th className="md:10rem lg:w-[20rem] text-left">
-                                E-Mail Address
+                            <th className="md:10rem lg:w-[10rem] text-left">
+                                Username
                             </th>
                             <td>
                                 <input
-                                    type="email"
-                                    name="email"
-                                    className="rounded-lg w-[20rem] lg:w-[40rem] h-8 px-3 py-4 border-2 border-gray-300"
+                                    type="text"
+                                    name="username"
+                                    className="rounded-lg w-[10rem] lg:w-[20rem] h-8 px-3 py-4 border-2 border-gray-300"
                                     onChange={e => {
-                                        setEmail(e.target.value);
+                                        setUsername(e.target.value);
                                     }}
                                 />
                             </td>
@@ -70,14 +79,14 @@ const SignIn = () => {
 
                     <div className="pb-10 ">
                         <tr>
-                            <th className="md:10rem lg:w-[20rem] text-left">
+                            <th className="md:10rem lg:w-[10rem] text-left">
                                 Password
                             </th>
                             <td>
                                 <input
                                     type="password"
                                     name="password"
-                                    className="rounded-lg w-[20rem] lg:w-[40rem] h-8 px-3 py-4 border-2 border-gray-300"
+                                    className="rounded-lg w-[10rem] lg:w-[20rem] h-8 px-3 py-4 border-2 border-gray-300"
                                     onChange={e => {
                                         setPassword(e.target.value);
                                     }}
@@ -86,11 +95,7 @@ const SignIn = () => {
                         </tr>
                     </div>
                     <div>
-                        <PrimaryButton
-                            type="submit"
-                            className="bg-cyan-100 px-32 py-3 rounded-xl"
-                            onClick={submitPost}
-                        >
+                        <PrimaryButton type="submit" onClick={submitPost}>
                             Sign in
                         </PrimaryButton>
                     </div>
@@ -105,7 +110,8 @@ const SignIn = () => {
                     </a>
                 </form>
                 {/* ))} */}
-            </EditorLayout>
+                {/* </EditorLayout> */}
+            </LayoutLoginRegis>
         </>
     );
 };

@@ -5,6 +5,7 @@ import {
     Procedure,
     CreateProcedure,
     MedicalRecord,
+    MedicalEdit,
     MedicalVet,
     MedicalClient,
     ProcedureVet,
@@ -26,6 +27,7 @@ function App() {
                         <Route index element={<MedicalRecord />} />
                         <Route path="view-vet" element={<MedicalVet />} />
                         <Route path="view-client" element={<MedicalClient />} />
+                        {/* <Route path="edit-md" element={<MedicalEdit />} /> */}
                     </Route>
                     <Route path="procedures">
                         <Route index element={<Procedure />} />

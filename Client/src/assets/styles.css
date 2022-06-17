@@ -482,6 +482,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0.75rem;
 }
 
+.m-0 {
+  margin: 0px;
+}
+
 .m-auto {
   margin: auto;
 }
@@ -496,12 +500,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1rem;
 }
 
+.ml-7 {
+  margin-left: 1.75rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
 
-.ml-7 {
-  margin-left: 1.75rem;
+.mt-7 {
+  margin-top: 1.75rem;
 }
 
 .mb-4 {
@@ -514,10 +530,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ml-2 {
   margin-left: 0.5rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
 }
 
 .mt-12 {
@@ -534,6 +546,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mb-12 {
   margin-bottom: 3rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-\[10rem\] {
+  margin-top: 10rem;
 }
 
 .block {
@@ -636,6 +656,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 1.25rem;
 }
 
+.w-\[10rem\] {
+  width: 10rem;
+}
+
 .w-\[15rem\] {
   width: 15rem;
 }
@@ -686,6 +710,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
 .gap-2 {
@@ -859,6 +887,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(207 250 254 / var(--tw-bg-opacity));
 }
 
+.p-0 {
+  padding: 0px;
+}
+
 .p-8 {
   padding: 2rem;
 }
@@ -946,6 +978,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 8rem;
 }
 
+.px-\[120px\] {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
 .pt-3\.5 {
   padding-top: 0.875rem;
 }
@@ -968,6 +1013,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pt-10 {
   padding-top: 2.5rem;
+}
+
+.pl-20 {
+  padding-left: 5rem;
+}
+
+.pb-7 {
+  padding-bottom: 1.75rem;
 }
 
 .text-left {
@@ -1000,6 +1053,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-\[10px\] {
   font-size: 10px;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-medium {
@@ -1276,7 +1334,15 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 40rem;
   }
 
+  .lg\:w-\[10rem\] {
+    width: 10rem;
+  }
+
   .lg\:w-\[40em\] {
     width: 40em;
+  }
+
+  .lg\:w-\[25rem\] {
+    width: 25rem;
   }
 } 
