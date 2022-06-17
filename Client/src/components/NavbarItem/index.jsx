@@ -10,7 +10,9 @@ const NavbarItemComponent = ({ items }) => {
                     {items.icon}
                     <span>{items.name}</span>
                 </div>
-                <div className="badge">{items.notificationCount}</div>
+                {items.notificationCount && (
+                    <div className="badge">{items.notificationCount}</div>
+                )}
             </NavLink>
         </NavbarItem>
     );

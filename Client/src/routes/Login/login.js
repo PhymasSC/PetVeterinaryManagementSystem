@@ -24,8 +24,8 @@ const SignIn = () => {
             username: username,
             password: password,
         }).then(res => {
-            if (res.status === 202) navigate("/Home");
-            console.log(res.status);
+            localStorage.setItem("user", JSON.stringify(res.data));
+            navigate("/");
         });
     };
 

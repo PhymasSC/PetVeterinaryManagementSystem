@@ -1,11 +1,8 @@
 const express = require("express");
 const db = require("../config/database");
-const cors = require("cors");
-const app = express();
-app.use(cors());
-app.use(express.json());
+const router = express.Router();
 
-app.post("/routes/medical_record/api/create", (req, res) => {
+router.post("/create", (req, res) => {
     const clientName = req.body.clientName;
     const petName = req.body.petName;
     const prescription = req.body.prescription;
@@ -20,12 +17,12 @@ app.post("/routes/medical_record/api/create", (req, res) => {
             if (err) {
                 console.log(err);
             }
-            console.log(`Result: ${result}`); 
+            console.log(`Result: ${result}`);
         }
     );
 });
 
-app.get("/api/retrieve", (req, res) => {
+router.get("/retrieve", (req, res) => {
     db.query("SELECT * FROM medicalrecord", (err, result) => {
         if (err) {
             console.log(err);
@@ -34,8 +31,8 @@ app.get("/api/retrieve", (req, res) => {
     });
 });
 
-app.get("/api/retrieveOne", (req, res) => {
-	const id = req.body.id;
+router.get("/retrieveOne", (req, res) => {
+    const id = req.body.id;
 
     db.query("SELECT * FROM medicalrecord WHERE id=?", [id], (err, result) => {
         if (err) {
@@ -45,8 +42,8 @@ app.get("/api/retrieveOne", (req, res) => {
     });
 });
 
-app.post("/api/update", (req, res) => {
-	const id = req.body.id;
+router.post("/update", (req, res) => {
+    const id = req.body.id;
     const clientName = req.body.clientName;
     const petName = req.body.petName;
     const prescription = req.body.prescription;
@@ -60,7 +57,9 @@ app.post("/api/update", (req, res) => {
             if (err) {
                 console.log(err);
             }
-            console.log(`Result: ${result}`); 
+            console.log(`Result: ${result}`);
         }
     );
 });
+
+module.exports = router;

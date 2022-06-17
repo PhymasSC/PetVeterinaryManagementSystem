@@ -11,6 +11,7 @@ function initialize(passport, getUserByName, getUserById) {
         if (authenticated_user.password !== password)
             return done(null, false, { status: 401, desc: "Wrong password" });
 
+        console.log(authenticated_user);
         return done(null, authenticated_user, { status: 202 });
     };
 
@@ -19,7 +20,13 @@ function initialize(passport, getUserByName, getUserById) {
     passport.serializeUser((user, done) => done(null, user.id));
 
     passport.deserializeUser(async (id, done) =>
-        done(null, await getUserById(id).then((res) => res[0]))
+        done(
+            null,
+            await getUserById(id).then((res) => {
+                console.log(res[0]);
+                return res[0];
+            })
+        )
     );
 }
 

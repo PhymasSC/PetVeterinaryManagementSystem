@@ -1,16 +1,11 @@
 import axios from "axios";
 
-const isLogin = async () => {
-    try {
-        const res = await axios.get("/auth/status");
-        return res.data;
-    } catch (err) {
-        return console.log(err);
-    }
+const isLogin = () => {
+    return localStorage.getItem("user");
 };
 
 export {
-    isLogin
+    isLogin,
     // postUserLogin: async (user, done) => {
     //     try {
     //         const res = await axios.post("/auth/login", user);

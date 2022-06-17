@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import logo from "./../../assets/img/logo.png";
 import { House, Notebook, Book, Calendar } from "phosphor-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import NavbarItem from "../NavbarItem";
+import PrimaryButton from "../Button/styles";
 
 const navbar = [
     {
@@ -16,7 +17,6 @@ const navbar = [
             />
         ),
         name: "Dashboard",
-        notificationCount: 5,
     },
     {
         location: "/appointments",
@@ -29,7 +29,6 @@ const navbar = [
             />
         ),
         name: "Appointment",
-        notificationCount: 5,
     },
     {
         location: "/medical-records",
@@ -42,7 +41,6 @@ const navbar = [
             />
         ),
         name: "Medical Record",
-        notificationCount: 5,
     },
     {
         location: "/procedures",
@@ -55,26 +53,28 @@ const navbar = [
             />
         ),
         name: "Procedure",
-        notificationCount: 5,
     },
 ];
 
 const SidebarComponent = props => {
-    const [isMenuOn, setIsMenuOn] = useState(false);
-
+    const navigate = useNavigate();
+    const logoutHandler = () => {
+        localStorage.removeItem("user");
+        navigate("/auth/login");
+    };
     return (
         <>
-            <div class="flex h-screen overflow-hidden rounded-lg bg-primary-500">
-                <div class="hidden md:flex md:flex-shrink-0">
-                    <div class="flex w-64 flex-col">
-                        <div class="flex flex-grow flex-col overflow-y-auto border-r border-primary-400 bg-primary-500 pt-5">
-                            <div class="flex flex-shrink-0 flex-col items-center px-4">
+            <div className="flex h-screen overflow-hidden rounded-lg bg-primary-500">
+                <div className="hidden md:flex md:flex-shrink-0">
+                    <div className="flex w-64 flex-col">
+                        <div className="flex flex-grow flex-col overflow-y-auto border-r border-primary-400 bg-primary-500 pt-5">
+                            <div className="flex flex-shrink-0 flex-col items-center px-4">
                                 <Link to="/">
                                     <div className="h-16 w-full flex justify-center items-center">
                                         <img src={logo} />
                                     </div>
                                 </Link>
-                                <button class="focus:shadow-outline hidden rounded-lg focus:outline-none">
+                                <button className="focus:shadow-outline hidden rounded-lg focus:outline-none">
                                     <svg
                                         fill="currentColor"
                                         viewBox="0 0 20 20"
@@ -94,8 +94,8 @@ const SidebarComponent = props => {
                                 </button>
                             </div>
 
-                            <div class="mt-5 flex flex-grow flex-col px-4">
-                                <nav class="flex-1 space-y-1 bg-primary-500">
+                            <div className="mt-5 flex flex-grow flex-col px-4">
+                                <nav className="flex-1 space-y-1 bg-primary-500">
                                     <ul className="mt-12">
                                         {navbar.map(nav => {
                                             return <NavbarItem items={nav} />;
@@ -103,18 +103,35 @@ const SidebarComponent = props => {
                                     </ul>
                                 </nav>
                             </div>
-                            <div class="flex flex-shrink-0 bg-primary-500 p-4 px-4">
+                            <div className="flex flex-shrink-0 bg-primary-500 p-4 px-4">
                                 <Link to="/">
-                                    <div class="flex items-center">
-                                        <div>
-                                            <img
-                                                class="inline-block h-9 w-9 rounded-full"
-                                                src="https://images.pexels.com/photos/6966591/pexels-photo-6966591.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                                                alt=""
-                                            />
+                                    <div className="flex items-center">
+                                        <div className="dropdown dropdown-top">
+                                            <label
+                                                tabindex="0"
+                                                className="cursor-pointer mt-6"
+                                            >
+                                                <img
+                                                    className="inline-block h-9 w-9 rounded-full"
+                                                    src="https://images.pexels.com/photos/6966591/pexels-photo-6966591.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                                    alt=""
+                                                />
+                                            </label>
+                                            <ul
+                                                tabindex="0"
+                                                className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 "
+                                            >
+                                                <li>
+                                                    <PrimaryButton
+                                                        onClick={logoutHandler}
+                                                    >
+                                                        Logout
+                                                    </PrimaryButton>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <div class="ml-3">
-                                            <p class="text-sm font-medium text-gray-900">
+                                        <div className="ml-3">
+                                            <p className="text-sm font-medium text-gray-900">
                                                 @Venice Clinic
                                             </p>
                                         </div>
@@ -124,17 +141,17 @@ const SidebarComponent = props => {
                         </div>
                     </div>
                 </div>
-                <div class="flex w-0 flex-1 flex-col overflow-hidden bg-teal-50">
-                    <main class="relative flex-1 overflow-y-auto focus:outline-none">
-                        <div class="py-6">
-                            <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
-                                <h1 class="text-lg text-neutral-600">
+                <div className="flex w-0 flex-1 flex-col overflow-hidden bg-teal-50">
+                    <main className="relative flex-1 overflow-y-auto focus:outline-none">
+                        <div className="py-6">
+                            <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
+                                <h1 className="text-lg text-neutral-600">
                                     {props.title}
                                 </h1>
                             </div>
-                            <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 ">
-                                <div class="py-4">
-                                    <div class="h-96 rounded-lg">
+                            <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 ">
+                                <div className="py-4">
+                                    <div className="h-96 rounded-lg">
                                         {props.children}
                                     </div>
                                 </div>
